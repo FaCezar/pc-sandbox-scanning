@@ -18,7 +18,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install \
 RUN mkdir /home/app
 WORKDIR /home/app
 
-COPY entrypoint.sh /home/app/entrypoint.shENTRYPOINT ["sh","entrypoint.sh"]
+COPY entrypoint.sh /home/app/entrypoint.sh
+ENTRYPOINT ["sh","entrypoint.sh"]
 
 # Malware end
 
